@@ -45,53 +45,6 @@ string formatRupiah(int amount)
     return formatted;
 }
 
-void receipt() {
-        int hargaMinuman, hargaUkuran, hargaTopping, jenis, ukuran, topping, tbak, jmlMinuman;
-        float diskon;
-
-        cout << "+--------------------------------------------------+" << endl;
-        cout << "|  Terimakasih telah belanja di Coffe Shop Kami    |" << endl;
-        cout << "|         Semoga Harimu Menyenangkan :)            |" << endl;
-        cout << "|  *********************************************   |" << endl;
-        cout << "+--------------------------------------------------+" << endl
-             << endl;
-
-        int persen = diskon * 100;
-
-        if (jenis == 1) {
-            hargaMinuman = 20000;
-        } else if (jenis == 2) {
-            hargaMinuman = 15000;
-        } else {
-            hargaMinuman = 25000;
-        }
-
-        if (ukuran == 1) {
-            hargaUkuran = 0;
-        } else if (ukuran == 2) {
-            hargaUkuran = 5000;
-        } else {
-            hargaUkuran = 10000;
-        }
-
-        if (topping == 1) {
-            hargaTopping= 5000;
-        } else if (topping == 2) {
-            hargaTopping = 3000;
-        } else {
-            hargaTopping = 0;
-        }
-
-
-        cout << "Minuman         = " << (jenis == 1 ? "Kopi" : (jenis == 2 ? "Teh" : "Jus")) << " " << "➞" << " " << formatRupiah(hargaMinuman) << endl;
-        cout << "UKuran          = " << (ukuran == 1 ? "Kecil" : (ukuran == 2 ? "Sedang" : "Besar")) << " " << "➞" << " " << formatRupiah(hargaUkuran) << endl;
-        cout << "Topping         = " << (topping == 1 ? "Whipped Cream" : (topping == 2 ? "Sirup Rasa" : "Tidak pakai topping")) << " " << "➞" << " " << formatRupiah(hargaTopping) << endl
-             << endl;
-        cout << "Jumlah Minuman  = " << jmlMinuman << " pcs" << endl;
-        cout << "Diskon          = " << persen << " %" << endl;
-
-        cout << "Total belanja Anda adalah = " << formatRupiah(tbak) << endl;
-}
 
 // Fungsi Algoritma pembelian
 int main()
@@ -275,7 +228,49 @@ int main()
     {
         system("clear");
         cout << "Ini adalah struk pembeliannya : " << endl << endl;
-        receipt();
+        
+        cout << "+--------------------------------------------------+" << endl;
+        cout << "|  Terimakasih telah belanja di Coffe Shop Kami    |" << endl;
+        cout << "|         Semoga Harimu Menyenangkan :)            |" << endl;
+        cout << "|  *********************************************   |" << endl;
+        cout << "+--------------------------------------------------+" << endl
+             << endl;
+
+        int persen = diskon * 100;
+
+        if (jenis == 1) {
+            hargaMinuman = 20000;
+        } else if (jenis == 2) {
+            hargaMinuman = 15000;
+        } else {
+            hargaMinuman = 25000;
+        }
+
+        if (ukuran == 1) {
+            hargaUkuran = 0;
+        } else if (ukuran == 2) {
+            hargaUkuran = 5000;
+        } else {
+            hargaUkuran = 10000;
+        }
+
+        if (topping == 1) {
+            hargaTopping= 5000;
+        } else if (topping == 2) {
+            hargaTopping = 3000;
+        } else {
+            hargaTopping = 0;
+        }
+
+
+        cout << "Minuman         = " << (jenis == 1 ? "Kopi" : (jenis == 2 ? "Teh" : "Jus")) << " " << "➞" << "  " << formatRupiah(hargaMinuman) << endl;
+        cout << "UKuran          = " << (ukuran == 1 ? "Kecil" : (ukuran == 2 ? "Sedang" : "Besar")) << " " << "➞" << "  " << formatRupiah(hargaUkuran) << endl;
+        cout << "Topping         = " << (topping == 1 ? "Whipped Cream" : (topping == 2 ? "Sirup Rasa" : "Tidak pakai topping")) << " " << "➞" << "  " << formatRupiah(hargaTopping) << endl
+             << endl;
+        cout << "Jumlah Minuman  = " << jmlMinuman << " pcs" << endl;
+        cout << "Diskon          = " << persen << " %" << endl;
+
+        cout << "Total belanja Anda adalah = " << formatRupiah(tbak) << endl;
         
     } else {
         system("clear");
